@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { useTheme } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import Logo from "../images/name_logo.png";
@@ -6,32 +6,31 @@ import { Bio } from "../data/constants";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { VscGithubInverted } from "react-icons/vsc";
 import { FaLinkedin } from "react-icons/fa";
+
 //  create styled components
-//  if the Component is exported from outside or react core library then you have to write like this
 const Nav = styled.div`
-  background-color: ${({ theme }) => theme.bg}; 
+  background-color: ${({ theme }) => theme.bg};
   height: 80px;
-  margin:  auto;
+  margin: auto;
   padding: 1rem 0;
-  dispaly: flex;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
   font-size: 1rem;
   position: sticky;
-  top: 0;
-  z-index: 10
-  overflow-x : none;
+  z-index: 1000;
+  overflow-x: none;
 `;
 
 //  nav container
 const NavContainer = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   padding: 0 24px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   font-size: 1rem;
 `;
 
@@ -44,7 +43,7 @@ const NavLogo = styled(LinkR)`
   color: white;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
@@ -54,10 +53,10 @@ const NavLogo = styled(LinkR)`
 //  navigation items
 const NavItems = styled.ul`
   width: 100%;
-  display: flex;
+  display: ${({ open }) => (open ? "none" : "flex")};
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 3rem;
   padding: 0 4px;
   list-style: none;
   text-decoration: none;
@@ -69,7 +68,7 @@ const NavItems = styled.ul`
 `;
 
 //  navigation link
-const Navlink = styled(LinkR)`
+const Navlink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -85,7 +84,7 @@ const Navlink = styled(LinkR)`
 const ButtonContainer = styled.div`
   width: 80%;
   height: 100%;
-  display: flex;
+  display: ${({ open }) => (open ? "none" : "flex")};
   justify-content: center;
   align-items: center;
   padding: 0 4px;
@@ -157,7 +156,7 @@ const MobileMenu = styled.ul`
 //  create a linkedin button
 const LInkedinButton = styled(LinkR)`
   border: 2px solid rgb(30, 101, 201);
-  color: white;
+  color: rgb(30, 120, 201);
   justify-content: center;
   display: flex;
   gap: 10px;
@@ -175,70 +174,85 @@ const LInkedinButton = styled(LinkR)`
   }
 `;
 
-export const Navbar = () => {
+export const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const [open, setOpen] = useState(false);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setOpen(!open);
+  };
   const theme = useTheme();
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768 && open) {
+        setOpen(false);
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [open]);
+
   return (
     <Nav>
       <NavContainer>
         {/*  create a nav Logo */}
-        <NavLogo to={"/"}>
-          <ButtonContainer>
-            <LInkedinButton to={Bio.github} target="_blank">
-              Linkedin <FaLinkedin size={24} fill="white" />
+        <NavLogo to={Bio.linkedin}>
+          <ButtonContainer open={open}>
+            <LInkedinButton to={Bio.linkedin} target="_blank">
+              LinkedIn <FaLinkedin size={24} fill="white" />
             </LInkedinButton>
           </ButtonContainer>
         </NavLogo>
 
-        {/*  set menu icon for mobiel view */}
-        <MobileIcon onClick={() => setOpen(!open)}>
+        {/*  set menu icon for mobile view */}
+        <MobileIcon onClick={toggleMobileMenu}>
           <MenuRoundedIcon style={{ color: "inherit" }} />
         </MobileIcon>
 
         {/*  navigation items */}
-        <NavItems>
-          <Navlink href="#about">About</Navlink>
-          <Navlink thref="#skills">Skills</Navlink>
-          <Navlink href="#experience">Experience</Navlink>
-          <Navlink href="#projects">Projects</Navlink>
-          <Navlink href="#education">Education</Navlink>
+        <NavItems open={open}>
+          <Navlink href="#About">About</Navlink>
+          <Navlink href="#Skills">Skills</Navlink>
+          <Navlink href="#Experience">Experience</Navlink>
+          <Navlink href="#Projects">Projects</Navlink>
+          <Navlink href="#Education">Education</Navlink>
         </NavItems>
 
         {/*  add mobile menu  */}
-        {open && (
-          <MobileMenu open={open}>
-            <Navlink onClick={() => setOpen(!open)} href="#About">
-              About
-            </Navlink>
-            <Navlink onClick={() => setOpen(!open)} href="#Skills">
-              Skills
-            </Navlink>
-            <Navlink onClick={() => setOpen(!open)} href="#Experience">
-              Experience
-            </Navlink>
-            <Navlink onClick={() => setOpen(!open)} href="#Projects">
-              Projects
-            </Navlink>
-            <Navlink onClick={() => setOpen(!open)} href="#Education">
-              Education
-            </Navlink>
-            <GithubButton to={Bio.github} target="_blank">
-              Github <VscGithubInverted size={24} fill="white" />
-            </GithubButton>
-            <LInkedinButton to={Bio.github} target="_blank">
-              Linkedin <FaLinkedin size={24} fill="white" />
-            </LInkedinButton>
-          </MobileMenu>
-        )}
+        <MobileMenu open={open}>
+          <Navlink onClick={() => setOpen(!open)} href="#About">
+            About
+          </Navlink>
+          <Navlink onClick={() => setOpen(!open)} href="#Skills">
+            Skills
+          </Navlink>
+          <Navlink onClick={() => setOpen(!open)} href="#Experience">
+            Experience
+          </Navlink>
+          <Navlink onClick={() => setOpen(!open)} href="#Projects">
+            Projects
+          </Navlink>
+          <Navlink onClick={() => setOpen(!open)} href="#Education">
+            Education
+          </Navlink>
+          <GithubButton to={Bio.github} target="_blank">
+            Github <VscGithubInverted size={24} fill="white" />
+          </GithubButton>
+          <LInkedinButton to={Bio.linkedin} target="_blank">
+            LinkedIn <FaLinkedin size={24} fill="white" />
+          </LInkedinButton>
+        </MobileMenu>
 
-        {/*  github porfile button  */}
-        <ButtonContainer>
+        {/*  github profile button  */}
+        <ButtonContainer open={open}>
           <GithubButton to={Bio.github} target="_blank">
             Github <VscGithubInverted size={24} fill="white" />
           </GithubButton>
         </ButtonContainer>
-
-        {/* {children} */}
       </NavContainer>
     </Nav>
   );

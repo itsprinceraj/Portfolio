@@ -20,6 +20,8 @@ const HeroContainer = styled.div`
   justify-content: center;
   position: relative;
   padding: 80px 30px;
+  margin-top: ${({ isMobileMenuOpen }) => (isMobileMenuOpen ? "310px" : "0")};
+  transition: margin-top 0.3s ease-in-out;
   z-index: 1;
 
   @media (max-width: 960px) {
@@ -245,9 +247,9 @@ const tiltOptions = {
   easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
 };
 
-export const HeroSection = () => {
+export const HeroSection = ({ isMobileMenuOpen }) => {
   return (
-    <HeroContainer>
+    <HeroContainer id="About" isMobileMenuOpen={isMobileMenuOpen}>
       <HeroBg>
         {/*  use starCanvas */}
         <StarCanva />

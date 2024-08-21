@@ -22,8 +22,8 @@ export const EarthCanva = () => {
           enableDamping
           dampingFactor={0.1} // Enable damping for smoother controls
           autoRotate
-          autoRotateSpeed={1} // Further reduce speed for better performance
-          enableZoom={true}
+          autoRotateSpeed={0.5} // Further reduce speed for better performance
+          enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />

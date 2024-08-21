@@ -142,7 +142,7 @@ const tiltOptions = {
 
 export const SkillsSection = () => {
   return (
-    <Container>
+    <Container id="Skills">
       <Wrapper>
         <Title>
           My Tech Stack <PiBracketsCurlyBold size={70} fill="orange" />
