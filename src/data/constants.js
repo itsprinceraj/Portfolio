@@ -321,7 +321,8 @@ export const projects = [
     // date: "Jan 2024 - Dec 2023",
     description:
       "SmartEd is an Ed-Tech platform where students can learn from various Instructors. It allows you to come and create educational content for students as a instructor and students can do there study and learn concepts form them .",
-    image: "",
+    image:
+      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/d14b335a8b0a7c01f50a41295d7da63f598df8d8/src/images/project%20images/smarted.png",
     tags: [
       `React Js |
       Tailwind Css |
@@ -341,7 +342,7 @@ export const projects = [
     description:
       "📍A real-time location tracking app using Socket.io and Leaflet. This project tracks user locations and updates them on a map in real-time. Built with Express.js and EJS, it's perfect for monitoring and visualizing live geolocation data.",
     image:
-      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/master/src/images/project%20images/Trackerapp.png",
     tags: [`Node Js | Express Js | Socket.io | Embedded Javascript`],
     category: "web app",
     github: "https://github.com/iamprinceraj/RealTime-Location-Tracker",
@@ -354,7 +355,7 @@ export const projects = [
     description:
       "A lightweight and easy-to-use currency converter library for Node.js and JavaScript applications. This library allows you to convert between different currencies in real-time using up-to-date exchange rates. Perfect for financial applications, e-commerce sites, and any project that requires accurate currency conversions.",
     image:
-      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/master/src/images/project%20images/npm_library.png",
     tags: [`JavaScript | Rest Api`],
     category: "npm library",
     github: "https://github.com/iamprinceraj/npm-library-currency-converter-",
@@ -367,7 +368,7 @@ export const projects = [
     description:
       "A simple and intuitive weather forecast application that provides real-time weather updates for any location. Built with HTML, CSS, and JavaScript, this project fetches data from a weather API to display current conditions, temperature. Perfect for learning about API integration and responsive design.",
     image:
-      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/master/src/images/project%20images/weatherapp.png",
     tags: [`HTML | CSS | JavaScript`],
     category: "web app",
     github: "https://github.com/iamprinceraj/Weather-app",
@@ -380,7 +381,7 @@ export const projects = [
     description:
       "Smart Ed Blogs is a React-based platform where ,Users can browse and read blog posts on various topics, all presented in a clean and user-friendy interface. This project highlights React's capability to create dynamic and responsive applications while keeping the functionality straightforward.",
     image:
-      "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
+      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/master/src/images/project%20images/blogs.png",
     tags: [`React Js | Context Api | Rest Api | Tailwind Css`],
     category: "web app",
     github: "https://github.com/iamprinceraj/SMART-ED-Blogs",
@@ -393,7 +394,7 @@ export const projects = [
     description:
       "A simple web application that allows users to search for any GitHub profile by username and view detailed information about their profile, including repositories, followers, and more.",
     image:
-      "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
+      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/master/src/images/project%20images/githubDash.png",
     tags: [`React Js | Tailwind Css | Rest Api`],
     category: "web app",
     github: "https://github.com/iamprinceraj/Github-get-User",
