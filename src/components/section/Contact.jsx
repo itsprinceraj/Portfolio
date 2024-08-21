@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const Container = styled.div`
   display: flex;
@@ -45,7 +46,7 @@ const Desc = styled.div`
   }
 `;
 
-const ContactForm = styled.div`
+const ContactForm = styled.form`
   width: 95%;
   max-width: 600px;
   display: flex;
@@ -98,6 +99,7 @@ const ContactButton = styled.input`
   padding: 13px 16px;
   margin-top: 2px;
   border-radius: 12px;
+  cursor: pointer;
   border: none;
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
@@ -105,23 +107,26 @@ const ContactButton = styled.input`
 `;
 
 export const Contact = () => {
-  const form = useRef();
-  const handelSubmit = (e) => {
+  const forms = useRef();
+  const handelSubmit = async (e) => {
+    const toastId = toast.loading("Loading...");
     e.preventDefault();
-    emailjs
+    await emailjs
       .sendForm(
-        "service_rvpidh9",
-        "template_nv7k7mj",
-        form.current,
-        "SybVGsYS52j2TfLbi"
+        "service_ld2gxud",
+        "template_92lz0lc",
+        forms.current,
+        "OB4TniZQTfnd8BMIt"
       )
       .then(
         (result) => {
-          alert("Message Sent");
-          form.current.result();
+          toast.dismiss(toastId);
+          toast.success("Email Sent!");
+          forms.current.result();
         },
         (error) => {
-          alert(error);
+          console.log(error);
+          toast.error("Unable to sent Email!");
         }
       );
   };
@@ -136,11 +141,10 @@ export const Contact = () => {
         >
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm onSubmit={handelSubmit}>
+        <ContactForm ref={forms} onSubmit={handelSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
           <ContactInputMessage placeholder="Message" name="message" rows={4} />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
