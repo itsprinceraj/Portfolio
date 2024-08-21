@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { HeroSection } from "./components/section/HeroSection";
 import { SkillsSection } from "./components/section/SkillsSection";
 import { ExperienceSection } from "./components/section/ExperienceSection";
+import { EducationSection } from "./components/section/EducationSection";
 
 //  create styled components
 const Body = styled.div`
@@ -21,6 +22,7 @@ function App() {
         <HeroSection />
         <SkillsSection />
         <ExperienceSection />
+        <EducationSection />
       </Body>
     </ThemeProvider>
   );

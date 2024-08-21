@@ -287,7 +287,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://rimt.ac.in/wp-content/uploads/2024/01/RIMT-LOGO.jpg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIw_CbdEPeThvpbs41pNYuEhu0VdbykafPig&s",
     school: "RIMT University, MandiGobindgarh",
     date: "Aug 2021 - June 2025",
     grade: "8.51 CGPA",
@@ -306,7 +306,7 @@ export const education = [
   {
     id: 2,
     img: "https://www.schooldekho.org/storage/logo//43xje72da46cs4wos8so44c8g4o0c4o.png",
-    school: "Bokaro Ispat Vidyalaya, Sector-9",
+    school: "Bokaro Ispat Vidyalaya, Sector-9 ,BKSC",
     date: "Apr 2017 - Apr 2018",
     grade: "52.4%",
     desc: "I completed my class 10 education at Bokaro Ispat Vidyalaya School, Bokaro Steel City.",
