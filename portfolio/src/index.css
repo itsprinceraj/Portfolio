@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0px !important;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 80px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222a35;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #575c66;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #626970;
+}
+
+::-webkit-backdrop-filter {
+  blur: 3px saturate(106%);
+}
+
+.logo-text {
+  margin-left: -1.6rem;
+  font-size: 1.6rem;
+}
+
+.logo-text:hover {
+  color: #854ce6;
+  transition: all 200ms ease-in-out;
+}
+
+@media (max-width: 950px) and (min-width: 768px) {
+  .logo-text {
+    display: none;
+  }
+}
+
+.loader-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* color: rgb(30, 101, 201); */
+  overflow: hidden; /* Ensure that the loader is centered within the viewport */
+}
+
+/* Loader CSS */
+.shapes {
+  width: 80px;
+  height: 80.352px;
+  position: absolute;
+  top: 40%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+
+  background: conic-gradient(
+    from 120deg at 50% 64%,
+    #0000,
+    #4c3ca6 1deg 120deg,
+    #0000 121deg
+  );
+  transform-origin: 50% 50%;
+  animation: shapes-b3u1dglg 1.2s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+.shapes:before,
+.shapes:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  transform-origin: 50% 66%;
+  animation: shapes-ki907olg 1.2s infinite;
+}
+
+.shapes:after {
+  --s: -1;
+}
+
+@keyframes shapes-b3u1dglg {
+  0%,
+  30% {
+    transform: rotate(0);
+  }
+
+  70% {
+    transform: rotate(120deg);
+  }
+
+  70.01%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shapes-ki907olg {
+  0% {
+    transform: rotate(calc(var(--s, 1) * 120deg)) translate(0);
+  }
+
+  30%,
+  70% {
+    transform: rotate(calc(var(--s, 1) * 120deg))
+      translate(calc(var(--s, 1) * -7.2px), 14.4px);
+  }
+
+  100% {
+    transform: rotate(calc(var(--s, 1) * 120deg)) translate(0);
+  }
+}
