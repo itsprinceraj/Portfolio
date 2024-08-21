@@ -316,13 +316,12 @@ export const education = [
 
 export const projects = [
   {
-    id: 11,
+    id: 8,
     title: "Smart-Ed Edtech App",
     // date: "Jan 2024 - Dec 2023",
     description:
-      "A Rule Builder application “Decision Hub” that empowers Business Analysts to create, save, and visualize decision strategies. Provide a no-code rule writing experience and visual representation to test these rules in real-time and observe the calculations at each step.",
-    image:
-      "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
+      "SmartEd is an Ed-Tech platform where students can learn from various Instructors. It allows you to come and create educational content for students as a instructor and students can do there study and learn concepts form them .",
+    image: "",
     tags: [
       `React Js |
       Tailwind Css |
@@ -340,10 +339,10 @@ export const projects = [
     title: "Real Time Location Tracker",
     // date: "Jun 2023 - Jul 2023",
     description:
-      "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
+      "📍A real-time location tracking app using Socket.io and Leaflet. This project tracks user locations and updates them on a map in real-time. Built with Express.js and EJS, it's perfect for monitoring and visualizing live geolocation data.",
     image:
       "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
-    tags: ["Node Js", "Express Js", "Socket.io", "Ejs"],
+    tags: [`Node Js | Express Js | Socket.io | Embedded Javascript`],
     category: "web app",
     github: "https://github.com/iamprinceraj/RealTime-Location-Tracker",
     webapp: "https://realtime-location-tracker-obba.onrender.com",
@@ -353,10 +352,10 @@ export const projects = [
     title: "Currency Converter",
     // date: "Jun 2023 - Jul 2023",
     description:
-      "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
+      "A lightweight and easy-to-use currency converter library for Node.js and JavaScript applications. This library allows you to convert between different currencies in real-time using up-to-date exchange rates. Perfect for financial applications, e-commerce sites, and any project that requires accurate currency conversions.",
     image:
       "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
-    tags: ["JavaScript", "Rest Api"],
+    tags: [`JavaScript | Rest Api`],
     category: "npm library",
     github: "https://github.com/iamprinceraj/npm-library-currency-converter-",
     webapp: "https://www.npmjs.com/package/optimal-currency-converter",
@@ -366,10 +365,10 @@ export const projects = [
     title: "Weather App",
     // date: "Apr 2023 - May 2023",
     description:
-      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+      "A simple and intuitive weather forecast application that provides real-time weather updates for any location. Built with HTML, CSS, and JavaScript, this project fetches data from a weather API to display current conditions, temperature. Perfect for learning about API integration and responsive design.",
     image:
       "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: [`HTML | CSS | JavaScript`],
     category: "web app",
     github: "https://github.com/iamprinceraj/Weather-app",
     webapp: "https://weather-app-vert-theta.vercel.app/",
@@ -379,10 +378,10 @@ export const projects = [
     title: "Smart-Ed Blogs",
     // date: "Oct 2022 - Jan 2023",
     description:
-      "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
+      "Smart Ed Blogs is a React-based platform where ,Users can browse and read blog posts on various topics, all presented in a clean and user-friendy interface. This project highlights React's capability to create dynamic and responsive applications while keeping the functionality straightforward.",
     image:
       "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
-    tags: ["React Js", "Context Api", "Rest Api", "Tailwind Css"],
+    tags: [`React Js | Context Api | Rest Api | Tailwind Css`],
     category: "web app",
     github: "https://github.com/iamprinceraj/SMART-ED-Blogs",
     webapp: "https://smart-ed-blogs.vercel.app/",
@@ -392,10 +391,10 @@ export const projects = [
     title: "Github Dashboard",
     // date: "Jan 2023 - Mar 2023",
     description:
-      "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
+      "A simple web application that allows users to search for any GitHub profile by username and view detailed information about their profile, including repositories, followers, and more.",
     image:
       "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
-    tags: ["React Js", "Tailwind Css", "Rest Api"],
+    tags: [`React Js | Tailwind Css | Rest Api`],
     category: "web app",
     github: "https://github.com/iamprinceraj/Github-get-User",
     webapp: "https://github-get-user.vercel.app/",

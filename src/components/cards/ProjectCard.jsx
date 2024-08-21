@@ -13,7 +13,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
@@ -56,15 +56,16 @@ const Title = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
 `;
-const Date = styled.div`
-  font-size: 12px;
-  margin-left: 2px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 80};
-  @media only screen and (max-width: 768px) {
-    font-size: 10px;
-  }
-`;
+// const Date = styled.div`
+//   font-size: 12px;
+//   margin-left: 2px;
+//   font-weight: 400;
+//   color: ${({ theme }) => theme.text_secondary + 80};
+//   @media only screen and (max-width: 768px) {
+//     font-size: 10px;
+//   }
+// `;
+
 const Description = styled.div`
   font-weight: 400;
   color: ${({ theme }) => theme.text_secondary + 99};
@@ -82,6 +83,11 @@ const Button = styled.a`
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+  transtion: all 0.2s ease-in-out;
+  &:hover {
+    text-decoration: underline;
+    color: green;
+  }
 `;
 
 const HorizontalBar = styled.div`
@@ -98,7 +104,7 @@ const ProjectCard = ({ project }) => {
       <HorizontalBar />
       <Details>
         <Title>{project.title}</Title>
-        <Date>{project.date}</Date>
+        {/* <Date>{project.date}</Date> */}
         <Description>{project.description}</Description>
       </Details>
 
