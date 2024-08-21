@@ -10,7 +10,7 @@ export const Bio = {
     "Motivated Full Stack Web Developer specializing in the MERN stack, with a passion for learning and delivering high-quality solutions. Ready to contribute and tackle challenges with a positive, growth-oriented mindset.",
   github: "https://github.com/iamprinceraj/",
   resume:
-    "https://drive.google.com/file/d/1txFKZD3LNIXMc329jD9c995AU8LItOXK/view?usp=drive_link",
+    "https://drive.google.com/file/d/1hXiTh7iFiaLVKBXpQWBnIoJ9_xdmpfU7/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/iam-princeraj",
   insta: "https://www.instagram.com/ig_cyrush_?igsh=bzF0cnZzNzY0Nmdp",
 };
