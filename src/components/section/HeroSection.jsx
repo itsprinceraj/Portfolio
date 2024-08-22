@@ -80,6 +80,7 @@ const HeroRight = styled.div`
 
   @media (max-width: 640px) {
     margin-bottom: 30px;
+    margin-left: 5.6rem;
   }
 `;
 
@@ -294,8 +295,15 @@ export const HeroSection = ({ isMobileMenuOpen }) => {
           <HeroRight>
             {/*  add page start animation for right section */}
             <motion.div {...headContentAnimation}>
-              <Tilt options={tiltOptions} style={{ height: 420, width: 360 }}>
-                <Img src={heroImg} alt="Prince Raj" />
+              <Tilt
+                options={tiltOptions}
+                style={{ height: "26.25rem", width: "22.5rem" }}
+              >
+                <Img
+                  src={heroImg}
+                  alt="Prince Raj"
+                  // style={{ marginLeft: "6.25rem" }}
+                />
               </Tilt>
             </motion.div>
           </HeroRight>
