@@ -46,7 +46,7 @@ To run this project locally, follow these steps:
 
 ## 📧 Contact
 
-If you'd like to get in touch, you can reach me via the contact form on the portfolio or directly through [My Email](dev.prince116@gmail.com).
+If you'd like to get in touch, you can reach me via the contact form on the portfolio or directly through dev.prince116@gmail.com.
 
 ## 🤝 Contributing
 
