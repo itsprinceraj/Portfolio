@@ -21,7 +21,7 @@ Welcome to my portfolio repository! This project is a showcase of my skills, exp
 
 ## 🎨 Demo
 
-You can view a live demo of the portfolio [here](#).
+You can view a live demo of the portfolio [here](https://portfolio-three-lovat-41.vercel.app/).
 
 ## 🛠️ Installation
 
@@ -29,11 +29,11 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/your-portfolio-repo.git
+    git clone https://github.com/iamprinceraj/Portfolio.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd your-portfolio-repo
+    cd ./root
     ```
 3. Install dependencies:
     ```bash
@@ -41,7 +41,7 @@ To run this project locally, follow these steps:
     ```
 4. Start the development server:
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## 📧 Contact
@@ -56,5 +56,5 @@ If you'd like to contribute to this project, feel free to open an issue or submi
 
 ---
 
-Built with ❤️ by [Prince Raj](https://your-portfolio-link.com)
+Built with ❤️ by [Prince Raj](https://portfolio-three-lovat-41.vercel.app/)
 
