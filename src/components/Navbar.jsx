@@ -217,7 +217,7 @@ export const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
         <NavItems open={open}>
           <Navlink href="#About">About</Navlink>
           <Navlink href="#Skills">Skills</Navlink>
-          <Navlink href="#Experience">Experience</Navlink>
+          {/* <Navlink href="#Experience">Experience</Navlink> */}
           <Navlink href="#Projects">Projects</Navlink>
           <Navlink href="#Education">Education</Navlink>
         </NavItems>
@@ -230,9 +230,9 @@ export const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
           <Navlink onClick={() => setOpen(!open)} href="#Skills">
             Skills
           </Navlink>
-          <Navlink onClick={() => setOpen(!open)} href="#Experience">
+          {/* <Navlink onClick={() => setOpen(!open)} href="#Experience">
             Experience
-          </Navlink>
+          </Navlink> */}
           <Navlink onClick={() => setOpen(!open)} href="#Projects">
             Projects
           </Navlink>
