@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { skills } from "../../data/constants";
-import { Tilt } from "react-tilt";
+// import { Tilt } from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import { PiBracketsCurlyBold } from "react-icons/pi";
 
 // create styled components
@@ -63,11 +64,13 @@ const StackContainer = styled.div`
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
+  cursor: pointer;
   background-color: rgba(17, 25, 40, 0.83);
   border: 1px solid rgba(255, 255, 255, 0.125);
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 10px 20px;
+
   @media (max-width: 768px) {
     max-width: 400px;
     padding: 10px 36px;
@@ -128,19 +131,21 @@ const StackImages = styled.img`
 `;
 
 //  add tilt option in Tech Stacks
-const tiltOptions = {
-  reverse: false, // reverse the tilt direction
-  max: 30, // max tilt rotation (degrees)
-  perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
-  scale: 1.05, // 2 = 200%, 1.5 = 150%, etc..
-  speed: 1000, // Speed of the enter/exit transition
-  transition: true, // Set a transition on enter/exit.
-  axis: null, // What axis should be disabled. Can be X or Y.
-  reset: true, // If the tilt effect has to be reset on exit.
-  easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
-};
+// const tiltOptions = {
+//   reverse: false, // reverse the tilt direction
+//   max: 30, // max tilt rotation (degrees)
+//   perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+//   scale: 1.05, // 2 = 200%, 1.5 = 150%, etc..
+//   speed: 1000, // Speed of the enter/exit transition
+//   transition: true, // Set a transition on enter/exit.
+//   axis: null, // What axis should be disabled. Can be X or Y.
+//   reset: true, // If the tilt effect has to be reset on exit.
+//   easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+// };
 
-export const SkillsSection = () => {
+export const SkillsSection = ({ props }) => {
+  //  create a state variable for managing the OnMouseMove event
+
   return (
     <Container id="Skills">
       <Wrapper>
@@ -150,7 +155,17 @@ export const SkillsSection = () => {
 
         <StackContainer>
           {skills.map((skill, index) => (
-            <Tilt key={index} options={tiltOptions}>
+            <Tilt
+              key={index}
+              // className="background-stripes track-on-window"
+              scale={1.03}
+              // options={tiltOptions}
+              glareEnable={true}
+              glarePosition="all"
+              glareMaxOpacity={0.5}
+              glareBorderRadius="16px"
+              glareColor="#05668D"
+            >
               <Skill key={`skill-${index}`}>
                 <SkillHeading>{skill.title}</SkillHeading>
                 <StackList>
