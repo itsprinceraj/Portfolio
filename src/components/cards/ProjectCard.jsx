@@ -29,7 +29,7 @@ const Image = styled.img`
 `;
 const Tags = styled.div`
   width: 100%;
-  color: yellow;
+  color: ${({ theme }) => (theme.tag)};
   display: flex;
   align-items: center;
   font-size: 1.1rem;
@@ -96,7 +96,7 @@ const HorizontalBar = styled.div`
   background-color: green;
 `;
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, darkMode, setDarkMode }) => {
   return (
     <Card>
       <Image src={project.image} />

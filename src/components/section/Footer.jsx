@@ -94,7 +94,7 @@ const Copyright = styled.p`
   text-align: center;
 `;
 
-export const Footer = () => {
+export const Footer = ({ darkMode }) => {
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -108,7 +108,7 @@ export const Footer = () => {
         </Nav>
         <SocialMediaIcons>
           <GithubIcon to={Bio.github} target="display">
-            <FaGithub size={35} fill="white" />
+            <FaGithub size={35} fill={darkMode ? "white" : "Black"} />
           </GithubIcon>
 
           <LinkedinIcon to={Bio.linkedin} target="display">

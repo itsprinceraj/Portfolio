@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { LuSend } from "react-icons/lu";
 
 const Container = styled.div`
   display: flex;
@@ -51,7 +52,7 @@ const ContactForm = styled.form`
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(17, 25, 40, 0.83);
+  background-color: ${({ theme }) => theme.contact};
   border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 32px;
   border-radius: 12px;
@@ -66,6 +67,7 @@ const ContactTitle = styled.div`
   color: ${({ theme }) => theme.text_primary};
 `;
 const ContactInput = styled.input`
+  required;
   flex: 1;
   background-color: transparent;
   border: 1px solid ${({ theme }) => theme.text_secondary + 50};
@@ -79,6 +81,7 @@ const ContactInput = styled.input`
   }
 `;
 const ContactInputMessage = styled.textarea`
+  required
   flex: 1;
   background-color: transparent;
   border: 1px solid ${({ theme }) => theme.text_secondary + 50};
@@ -91,17 +94,20 @@ const ContactInputMessage = styled.textarea`
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `;
-const ContactButton = styled.input`
+const ContactButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
   width: 100%;
   text-decoration: none;
   text-align: center;
   background: hsla(271, 100%, 50%, 1);
   padding: 13px 16px;
-  margin-top: 2px;
   border-radius: 12px;
   cursor: pointer;
   border: none;
-  color: ${({ theme }) => theme.text_primary};
+  color: white;
   font-size: 18px;
   font-weight: 600;
 `;
@@ -120,9 +126,11 @@ export const Contact = () => {
       )
       .then(
         (result) => {
+          forms.current.reset();
           toast.dismiss(toastId);
           toast.success("Email Sent!");
-          forms.current.result();
+
+          // console.log(result);
         },
         (error) => {
           console.log(error);
@@ -143,10 +151,17 @@ export const Contact = () => {
         </Desc>
         <ContactForm ref={forms} onSubmit={handelSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInputMessage placeholder="Message" name="message" rows={4} />
-          <ContactButton type="submit" value="Send" />
+          <ContactInput placeholder="Your Email" name="from_email" required />
+          <ContactInput placeholder="Your Name" name="from_name" required />
+          <ContactInputMessage
+            required
+            placeholder="Message"
+            name="message"
+            rows={4}
+          />
+          <ContactButton value="Send">
+            Send Mail <LuSend />
+          </ContactButton>
         </ContactForm>
       </Wrapper>
     </Container>

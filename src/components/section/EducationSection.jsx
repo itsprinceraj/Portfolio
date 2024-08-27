@@ -41,15 +41,20 @@ const Title = styled.div`
   }
 `;
 
-export const EducationSection = () => {
+export const EducationSection = ({ darkMode, setDarkMode }) => {
   return (
     <Container id="Education">
       <Wrapper>
         <Title>Education</Title>
 
-        <VerticalTimeline>
+        <VerticalTimeline lineColor={darkMode ? "#39404C" : "black"}>
           {education.map((education, index) => (
-            <EducationCard key={`education-${index}`} education={education} />
+            <EducationCard
+              key={`education-${index}`}
+              education={education}
+              darkMode={darkMode}
+              setDarkMode={setDarkMode}
+            />
           ))}
         </VerticalTimeline>
         <EarthCanva />

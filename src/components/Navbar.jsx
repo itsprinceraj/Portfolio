@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled, { useTheme } from "styled-components";
 import { Link as LinkR } from "react-router-dom";
-import Logo from "../images/name_logo.png";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { Bio } from "../data/constants";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { VscGithubInverted } from "react-icons/vsc";
@@ -174,7 +174,19 @@ const LInkedinButton = styled(LinkR)`
   }
 `;
 
-export const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
+const DarkModeButton = styled.div`
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Navbar = ({
+  isMobileMenuOpen,
+  setIsMobileMenuOpen,
+  setDarkMode,
+  darkMode,
+}) => {
   const [open, setOpen] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -203,7 +215,8 @@ export const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
         <NavLogo to={Bio.linkedin}>
           <ButtonContainer open={open}>
             <LInkedinButton to={Bio.linkedin} target="_blank">
-              LinkedIn <FaLinkedin size={24} fill="white" />
+              LinkedIn{" "}
+              <FaLinkedin size={24} fill={darkMode ? "white" : "black"} />
             </LInkedinButton>
           </ButtonContainer>
         </NavLogo>
@@ -220,6 +233,13 @@ export const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
           {/* <Navlink href="#Experience">Experience</Navlink> */}
           <Navlink href="#Projects">Projects</Navlink>
           <Navlink href="#Education">Education</Navlink>
+          <DarkModeButton onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? (
+              <MdOutlineLightMode size={24} fill="white" />
+            ) : (
+              <MdOutlineDarkMode fill="black" size={24} />
+            )}
+          </DarkModeButton>
         </NavItems>
 
         {/*  add mobile menu  */}
@@ -239,18 +259,30 @@ export const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
           <Navlink onClick={() => setOpen(!open)} href="#Education">
             Education
           </Navlink>
+
+          {/*  mode switch button  */}
+          <DarkModeButton onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? (
+              <MdOutlineLightMode size={24} fill="white" />
+            ) : (
+              <MdOutlineDarkMode fill="black" size={24} />
+            )}
+          </DarkModeButton>
           <GithubButton to={Bio.github} target="_blank">
-            Github <VscGithubInverted size={24} fill="white" />
+            Github{" "}
+            <VscGithubInverted size={24} fill={darkMode ? "white" : "black"} />
           </GithubButton>
           <LInkedinButton to={Bio.linkedin} target="_blank">
-            LinkedIn <FaLinkedin size={24} fill="white" />
+            LinkedIn{" "}
+            <FaLinkedin size={24} fill={darkMode ? "white" : "black"} />
           </LInkedinButton>
         </MobileMenu>
 
         {/*  github profile button  */}
         <ButtonContainer open={open}>
           <GithubButton to={Bio.github} target="_blank">
-            Github <VscGithubInverted size={24} fill="white" />
+            Github{" "}
+            <VscGithubInverted size={24} fill={darkMode ? "white" : "black"} />
           </GithubButton>
         </ButtonContainer>
       </NavContainer>

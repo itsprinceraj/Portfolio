@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { skills } from "../../data/constants";
-// import { Tilt } from "react-tilt";
 import Tilt from "react-parallax-tilt";
 import { PiBracketsCurlyBold } from "react-icons/pi";
 
@@ -65,7 +64,7 @@ const Skill = styled.div`
   width: 100%;
   max-width: 500px;
   cursor: pointer;
-  background-color: rgba(17, 25, 40, 0.83);
+  background-color: ${({ theme }) => theme.skill};
   border: 1px solid rgba(255, 255, 255, 0.125);
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
@@ -143,14 +142,15 @@ const StackImages = styled.img`
 //   easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
 // };
 
-export const SkillsSection = ({ props }) => {
+export const SkillsSection = ({ darkMode }) => {
   //  create a state variable for managing the OnMouseMove event
 
   return (
     <Container id="Skills">
       <Wrapper>
         <Title>
-          My Tech Stack <PiBracketsCurlyBold size={70} fill="orange" />
+          My Tech Stack{" "}
+          <PiBracketsCurlyBold size={70} fill={darkMode ? "orange" : "red"} />
         </Title>
 
         <StackContainer>

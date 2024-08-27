@@ -71,7 +71,7 @@ const Span = styled.div`
   max-width: 100%;
 `;
 
-export const EducationCard = ({ education }) => {
+export const EducationCard = ({ education, darkMode, setDarkMode }) => {
   return (
     <VerticalTimelineElement
       icon={
@@ -87,10 +87,10 @@ export const EducationCard = ({ education }) => {
         display: "flex",
         flexDirection: "column",
         gap: "12px",
-        background: "#1d1836",
+        background: darkMode ? "rgba(17, 25, 40, 0.83)" : "black",
         color: "#fff",
         boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-        backgroundColor: "rgba(17, 25, 40, 0.83)",
+        backgroundColor: darkMode ? "rgba(17, 25, 40, 0.83)" : "white",
         border: "1px solid rgba(255, 255, 255, 0.125)",
         borderRadius: "6px",
       }}
@@ -98,6 +98,7 @@ export const EducationCard = ({ education }) => {
         borderRight: "7px solid  rgba(255, 255, 255, 0.3)",
       }}
       date={education?.date}
+      dateClassName="date-education"
     >
       <Top>
         <Image src={education?.img} />

@@ -9,6 +9,10 @@ export const darkTheme = {
   button: "#854CE6",
   white: "#FFFFFF",
   black: "#000000",
+  skill: "rgba(17, 25, 40, 0.83);",
+  tag: "yellow",
+  line: "white",
+  // contact: "grey",
 };
 
 export const lightTheme = {
@@ -19,4 +23,8 @@ export const lightTheme = {
   text_secondary: "#48494a",
   card: "#FFFFFF",
   button: "#5c5b5b",
+  skill: "white",
+  tag: "blue",
+  line: "black",
+  contact: "white",
 };

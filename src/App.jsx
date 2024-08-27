@@ -45,24 +45,26 @@ function App() {
       <Navbar
         isMobileMenuOpen={isMobileMenuOpen}
         setIsMobileMenuOpen={setIsMobileMenuOpen}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
       />
       <Body>
         <div>
           <HeroSection isMobileMenuOpen={isMobileMenuOpen} />
           <Wrapper>
-            <SkillsSection />
+            <SkillsSection darkMode={darkMode} setDarkMode={setDarkMode} />
 
             {/* <ExperienceSection /> */}
           </Wrapper>
 
           {/*  projects */}
-          <Projects />
+          <Projects darkMode={darkMode} setDarkMode={setDarkMode} />
 
           <Wrapper>
-            <EducationSection />
-            <Contact />
+            <EducationSection darkMode={darkMode} setDarkMode={setDarkMode} />
+            <Contact darkMode={darkMode} />
           </Wrapper>
-          <Footer />
+          <Footer darkMode={darkMode}/>
         </div>
       </Body>
     </ThemeProvider>
