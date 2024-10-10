@@ -322,7 +322,7 @@ export const projects = [
     description:
       "SmartEd is an Ed-Tech platform where students can learn from various Instructors. It allows you to come and create educational content for students as a instructor and students can do there study and learn concepts form them .",
     image:
-      "https://github.com/itsprinceraj/Portfolio-/blob/61d288810ddb38b06fbe369ddf41f67f7064d113/src/images/project%20images/Screenshot%202024-08-22%20215006.png",
+      "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/smartEd.png",
     tags: [
       `React Js |
       Tailwind Css |
@@ -342,7 +342,7 @@ export const projects = [
     description:
       "📍A real-time location tracking app using Socket.io and Leaflet. This project tracks user locations and updates them on a map in real-time. Built with Express.js and EJS, it's perfect for monitoring and visualizing live geolocation data.",
     image:
-      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/master/src/images/project%20images/Trackerapp.png",
+      "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/Screenshot%202024-08-22%20234350.png",
     tags: [`Node Js | Express Js | Socket.io | Embedded Javascript`],
     category: "web app",
     github: "https://github.com/iamprinceraj/RealTime-Location-Tracker",
@@ -355,7 +355,7 @@ export const projects = [
     description:
       "A lightweight and easy-to-use currency converter library for Node.js and JavaScript applications. This library allows you to convert between different currencies in real-time using up-to-date exchange rates. Perfect for financial applications, e-commerce sites, and any project that requires accurate currency conversions.",
     image:
-      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/master/src/images/project%20images/npm_library.png",
+      "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/npm_library.png",
     tags: [`JavaScript | Rest Api`],
     category: "npm library",
     github: "https://github.com/iamprinceraj/npm-library-currency-converter-",
@@ -368,7 +368,7 @@ export const projects = [
     description:
       "A simple and intuitive weather forecast application that provides real-time weather updates for any location. Built with HTML, CSS, and JavaScript, this project fetches data from a weather API to display current conditions, temperature. Perfect for learning about API integration and responsive design.",
     image:
-      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/master/src/images/project%20images/weatherapp.png",
+      "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/weatherapp.png",
     tags: [`HTML | CSS | JavaScript`],
     category: "web app",
     github: "https://github.com/iamprinceraj/Weather-app",
@@ -381,7 +381,7 @@ export const projects = [
     description:
       "Smart Ed Blogs is a React-based platform where ,Users can browse and read blog posts on various topics, all presented in a clean and user-friendy interface. This project highlights React's capability to create dynamic and responsive applications while keeping the functionality straightforward.",
     image:
-      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/master/src/images/project%20images/blogs.png",
+      "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/blogs.png",
     tags: [`React Js | Context Api | Rest Api | Tailwind Css`],
     category: "web app",
     github: "https://github.com/iamprinceraj/SMART-ED-Blogs",
@@ -394,7 +394,7 @@ export const projects = [
     description:
       "A simple web application that allows users to search for any GitHub profile by username and view detailed information about their profile, including repositories, followers, and more.",
     image:
-      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/master/src/images/project%20images/githubDash.png",
+      "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/githubDash.png",
     tags: [`React Js | Tailwind Css | Rest Api`],
     category: "web app",
     github: "https://github.com/iamprinceraj/Github-get-User",
