@@ -322,7 +322,7 @@ export const projects = [
     description:
       "SmartEd is an Ed-Tech platform where students can learn from various Instructors. It allows you to come and create educational content for students as a instructor and students can do there study and learn concepts form them .",
     image:
-      "https://raw.githubusercontent.com/iamprinceraj/Portfolio/d14b335a8b0a7c01f50a41295d7da63f598df8d8/src/images/project%20images/smarted.png",
+      "https://github.com/itsprinceraj/Portfolio-/blob/61d288810ddb38b06fbe369ddf41f67f7064d113/src/images/project%20images/Screenshot%202024-08-22%20215006.png",
     tags: [
       `React Js |
       Tailwind Css |
