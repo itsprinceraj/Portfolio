@@ -170,7 +170,7 @@ const LInkedinButton = styled(LinkR)`
   text-decoration: none;
   &:hover {
     background: rgb(30, 101, 201);
-    color: black;
+    color: white;
   }
 `;
 
