@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { ImLink } from "react-icons/im";
+import { TbMinusVertical } from "react-icons/tb";
 
 const Card = styled.div`
   width: 330px;
@@ -11,6 +13,7 @@ const Card = styled.div`
   padding: 26px 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 14px;
   transition: all 0.2s ease-in-out;
   &:hover {
@@ -29,7 +32,7 @@ const Image = styled.img`
 `;
 const Tags = styled.div`
   width: 100%;
-  color: ${({ theme }) => (theme.tag)};
+  color: ${({ theme }) => theme.tag};
   display: flex;
   align-items: center;
   font-size: 1.1rem;
@@ -37,6 +40,19 @@ const Tags = styled.div`
   gap: 8px;
   margin-top: 6px;
 `;
+
+const LinkButton = styled.a`
+  color: ${({ theme }) => theme.primary};
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transtion: all 0.2s ease-in-out;
+  &:hover {
+    text-decoration: underline;
+    color: #49a7e6;
+  }
+`;
+
 const Details = styled.div`
   width: 100%;
   display: flex;
@@ -107,10 +123,18 @@ const ProjectCard = ({ project, darkMode, setDarkMode }) => {
         {/* <Date>{project.date}</Date> */}
         <Description>{project.description}</Description>
       </Details>
-
-      <Button href={project.github} target="_blank">
-        View Code
-      </Button>
+      <div className="project-button">
+        <Button href={project.github} target="_blank">
+          View Code
+        </Button>
+        <LinkButton
+          href={project.webapp}
+          target="_blank"
+          className="link-button"
+        >
+          View <ImLink />
+        </LinkButton>
+      </div>
     </Card>
   );
 };

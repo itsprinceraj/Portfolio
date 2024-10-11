@@ -146,9 +146,9 @@ export const skills = [
           "https://fineproxy.org/wp-content/uploads/2023/07/vercel.app_logo.png",
       },
       {
-        name: "Netlify",
+        name: "Chrome Dev Tools",
         image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chrome/chrome-original.svg",
       },
       {
         name: "VS Code",
@@ -332,7 +332,7 @@ export const projects = [
       MongoDb |`,
     ],
     category: "web app",
-    github: "https://github.com/iamprinceraj/SmartEd-",
+    github: "https://github.com/itsprinceraj/Smart-ED",
     webapp: "https://smart-ed-frontend.vercel.app/",
   },
   {
@@ -345,7 +345,7 @@ export const projects = [
       "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/Screenshot%202024-08-22%20234350.png",
     tags: [`Node Js | Express Js | Socket.io | Embedded Javascript`],
     category: "web app",
-    github: "https://github.com/iamprinceraj/RealTime-Location-Tracker",
+    github: "https://github.com/itsprinceraj/RealTime-Location-Tracker",
     webapp: "https://realtime-location-tracker-obba.onrender.com",
   },
   {
@@ -358,7 +358,7 @@ export const projects = [
       "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/npm_library.png",
     tags: [`JavaScript | Rest Api`],
     category: "npm library",
-    github: "https://github.com/iamprinceraj/npm-library-currency-converter-",
+    github: "https://github.com/itsprinceraj/npm-library-currency-converter",
     webapp: "https://www.npmjs.com/package/optimal-currency-converter",
   },
   {
@@ -371,7 +371,7 @@ export const projects = [
       "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/weatherapp.png",
     tags: [`HTML | CSS | JavaScript`],
     category: "web app",
-    github: "https://github.com/iamprinceraj/Weather-app",
+    github: "https://github.com/itsprinceraj/Weather-app-",
     webapp: "https://weather-app-vert-theta.vercel.app/",
   },
   {
@@ -384,7 +384,7 @@ export const projects = [
       "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/blogs.png",
     tags: [`React Js | Context Api | Rest Api | Tailwind Css`],
     category: "web app",
-    github: "https://github.com/iamprinceraj/SMART-ED-Blogs",
+    github: "https://github.com/itsprinceraj/SMART-ED-Blogs-",
     webapp: "https://smart-ed-blogs.vercel.app/",
   },
   {
@@ -397,7 +397,7 @@ export const projects = [
       "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/githubDash.png",
     tags: [`React Js | Tailwind Css | Rest Api`],
     category: "web app",
-    github: "https://github.com/iamprinceraj/Github-get-User",
+    github: "https://github.com/itsprinceraj/Github-get-User",
     webapp: "https://github-get-user.vercel.app/",
   },
 ];
