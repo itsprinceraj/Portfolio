@@ -68,7 +68,7 @@ export const skills = [
       {
         name: "Express Js",
         image:
-          "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=FFFFFF",
+          "https://cdn.prod.website-files.com/609bc2fa29b6d5b7f44a2785/647743f51bc76753239a8bc6_expressjs-logo.webp",
       },
       {
         name: "Mongoose",
@@ -79,7 +79,7 @@ export const skills = [
       {
         name: "Socket.io",
         image:
-          "https://png.pngitem.com/pimgs/s/345-3458102_flash-of-light-socket-io-icon-svg-hd.png",
+          "https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg",
       },
       {
         name: "MySQL",
@@ -154,11 +154,6 @@ export const skills = [
         name: "VS Code",
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
-      },
-      {
-        name: "Chat GPT",
-        image:
-          "https://img.icons8.com/?size=100&id=iGqse5s20iex&format=png&color=439D7F",
       },
       {
         name: "Kali Linux",
