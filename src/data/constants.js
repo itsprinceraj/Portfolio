@@ -345,16 +345,16 @@ export const projects = [
   },
   {
     id: 10,
-    title: "Currency Converter",
+    title: "Code-x:Online IDE",
     // date: "Jun 2023 - Jul 2023",
     description:
-      "A lightweight and easy-to-use currency converter library for Node.js and JavaScript applications. This library allows you to convert between different currencies in real-time using up-to-date exchange rates. Perfect for financial applications, e-commerce sites, and any project that requires accurate currency conversions.",
+      "🌐 Online Code Editor: A sleek web-based code editor built with the MERN stack. Write, edit, and preview your HTML, CSS, and JavaScript code ✍️ in real time! 🚀 Featuring: Autocomplete 🪄 for faster coding. An intuitive interface 🖥️ for a seamless experience.",
     image:
       "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/npm_library.png",
-    tags: [`JavaScript | Rest Api`],
-    category: "npm library",
-    github: "https://github.com/itsprinceraj/npm-library-currency-converter",
-    webapp: "https://www.npmjs.com/package/optimal-currency-converter",
+    tags: [`ReactJs | Node Js | Monaco-editor | Express Js | MongoDB | Rest Api`],
+    category: "web App",
+    github: "https://github.com/itsprinceraj/Code-X",
+    webapp: "https://code-x-ashen.vercel.app/",
   },
   {
     id: 0,
