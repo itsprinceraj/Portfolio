@@ -350,8 +350,10 @@ export const projects = [
     description:
       "🌐 Online Code Editor: A sleek web-based code editor built with the MERN stack. Write, edit, and preview your HTML, CSS, and JavaScript code ✍️ in real time! 🚀 Featuring: Autocomplete 🪄 for faster coding. An intuitive interface 🖥️ for a seamless experience.",
     image:
-      "https://raw.githubusercontent.com/itsprinceraj/Portfolio/refs/heads/master/src/images/project%20images/npm_library.png",
-    tags: [`ReactJs | Node Js | Monaco-editor | Express Js | MongoDB | Rest Api`],
+      "https://github.com/itsprinceraj/Portfolio/blob/24d117491f2c84f669587f7be886229e6a7d0de7/src/images/project%20images/codeX.png?raw=true",
+    tags: [
+      `ReactJs | Node Js | Monaco-editor | Express Js | MongoDB | Rest Api`,
+    ],
     category: "web App",
     github: "https://github.com/itsprinceraj/Code-X",
     webapp: "https://code-x-ashen.vercel.app/",
