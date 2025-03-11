@@ -1,16 +1,18 @@
 export const Bio = {
   name: "Prince Raj",
   roles: [
-    "Full Stack Web Developer",
+    "Full Stack Developer",
     "Backend Developer",
     "Software Developer",
     "Frontend Developer",
+    "Js Developer",
+    ".Net Developer",
   ],
   description:
-    "Motivated Full Stack Web Developer specializing in the MERN stack, with a passion for learning and delivering high-quality solutions. Ready to contribute and tackle challenges with a positive, growth-oriented mindset.",
+    "Motivated Full Stack Developer specializing in the MERN stack, with a passion for learning and delivering high-quality solutions. Ready to contribute and tackle challenges with a positive, growth-oriented mindset.",
   github: "https://github.com/itsprinceraj",
   resume:
-    "https://drive.google.com/file/d/1iyTHOUZWU143HS_ZidDXCBol__ezDE1U/view?usp=sharing",
+    "https://drive.google.com/file/d/1ERCCbbHkyPG5JxMFU0Lih7Rh6iYjWVK-/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/iam-princeraj",
   insta: "https://www.instagram.com/ig_cyrush_?igsh=bzF0cnZzNzY0Nmdp",
 };
